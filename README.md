@@ -1,1 +1,1 @@
-# Welcome to my log about SQL 
+# Welcome SQL pathway
