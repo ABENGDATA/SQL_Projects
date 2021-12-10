@@ -1,1 +1,1 @@
-# SQL_Projects
+# Welcome to my log about SQL 
