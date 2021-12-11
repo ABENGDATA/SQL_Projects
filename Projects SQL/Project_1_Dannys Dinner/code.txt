@@ -1,0 +1,225 @@
+
+-- Part I : Exploration of the dataset and its relations 
+-- Inspect squema indexes 
+SELECT *
+FROM pg_indexes 
+WHERE schemaname = 'dannys_diner';
+-- Inspect table 1 
+SELECT *
+FROM dannys_diner.members;
+-- Inspect table 2 
+SELECT *
+FROM dannys_diner.menu;
+-- Inspect table 3 
+SELECT *
+FROM dannys_diner.sales ; 
+
+-- Part II : Identify Duplicates , Nulls 
+-- 1. Duplicates 
+-- 2 . Nulls 
+
+-- Joining the data 
+DROP TABLE IF EXISTS customer_data ;
+CREATE TEMP TABLE customer_data AS 
+SELECT 
+sales.customer_id,
+sales.order_date,
+sales.product_id,
+menu.price,
+menu.product_name,
+members.join_date  AS join_date 
+FROM dannys_diner.sales AS sales 
+FULL JOIN dannys_diner.menu AS menu 
+ON menu.product_id = sales.product_id
+FULL JOIN dannys_diner.members AS members
+ON sales.customer_id = members.customer_id 
+ORDER BY customer_id;
+
+SELECT *
+FROM customer_data ;
+
+--What is the total amount each customer spent at the restaurant?}
+SELECT customer_id, SUM(price) as spend
+FROM customer_data
+GROUP BY customer_id
+ORDER BY spend DESC; 
+--How many days has each customer visited the restaurant?
+SELECT customer_id , COUNT(order_date) as days 
+FROM customer_data 
+GROUP BY customer_id
+ORDER BY days DESC ; 
+--What was the first item from the menu purchased by each customer?
+WITH customer_product AS (
+SELECT customer_id,
+order_date,
+product_name,
+ROW_NUMBER() OVER(PARTITION BY customer_id ORDER BY order_date ASC) AS first_item 
+FROM customer_data   
+)
+
+SELECT *
+FROM customer_product 
+WHERE first_item = 1 ;
+--What is the most purchased item on the menu and how many times was it purchased by all customers?
+--Which item was the most popular for each customer?
+WITH most_purchased AS (
+SELECT 
+ROW_NUMBER() OVER (PARTITION BY customer_id) AS row_numbers,
+customer_id ,
+product_name,
+COUNT(product_name)  as purchased 
+FROM customer_data
+GROUP BY customer_id , product_name
+ORDER BY customer_id, purchased DESC
+)
+
+SELECT  *
+FROM most_purchased
+WHERE row_numbers = 1;
+
+
+--Which item was purchased first by the customer after they became a member?
+WITH customer_order AS (
+SELECT ROW_NUMBER() OVER(PARTITION BY customer_id  ORDER BY order_date ASC) AS ROW ,
+customer_id,
+order_date,
+join_date,
+product_name
+FROM customer_data
+WHERE join_date < order_date
+)
+
+SELECT customer_id,product_name
+FROM customer_order 
+WHERE ROW = 1 ;
+
+--Which item was purchased just before the customer became a member?
+WITH customer_order2 AS (
+SELECT ROW_NUMBER() OVER(PARTITION BY customer_id  ORDER BY order_date ASC) AS ROW ,
+customer_id,
+order_date,
+join_date,
+product_name
+FROM customer_data
+WHERE join_date > order_date
+)
+
+SELECT *
+FROM customer_order2
+WHERE ROW = 1 ;
+
+--What is the total items and amount spent for each member before they became a member?
+WITH customer_order3 AS (
+SELECT ROW_NUMBER() OVER(PARTITION BY customer_id  ORDER BY order_date ASC) AS ROW ,
+customer_id,
+order_date,
+join_date,
+product_name,
+price
+FROM customer_data
+WHERE join_date > order_date
+)
+
+
+SELECT customer_id,
+COUNT(*) AS number_of_items , 
+SUM(price) AS Total_spent
+FROM customer_order3
+GROUP BY customer_id;
+--If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+WITH customer_points AS (
+SELECT customer_id,
+CASE 
+WHEN product_name = 'sushi' THEN price*2*10
+ELSE price*10
+END AS points
+FROM customer_data
+) 
+
+SELECT customer_id,SUM(points) AS total_points
+FROM customer_points
+GROUP BY customer_id
+ORDER BY total_points DESC;
+
+--In the first week after a customer joins the program (including their join date) 
+-- they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+SELECT customer_id , 
+SUM(
+CASE 
+WHEN product_name = 'sushi' THEN price*2*10
+WHEN order_date BETWEEN  join_date AND join_date::DATE + '6'::INTEGER   THEN price*2*10
+ELSE price*10
+END )AS points
+FROM customer_data 
+WHERE customer_id IN ('A','B') AND order_date <= '2021-01-31'
+GROUP BY customer_id
+ORDER BY points; 
+
+
+
+SELECT
+  sales.customer_id,
+  SUM(
+    CASE
+    -- you may want to check this logic carefully!
+      WHEN menu.product_name = 'sushi' THEN 2 * 10 * menu.price
+      WHEN sales.order_date BETWEEN
+      -- especially this line!
+         members.join_date::DATE  AND members.join_date::DATE+'6'::INTEGER
+        THEN 2 * 10 * menu.price
+        ELSE menu.price *10
+      END) AS points
+FROM dannys_diner.sales
+INNER JOIN dannys_diner.menu
+  ON sales.product_id = menu.product_id
+INNER JOIN dannys_diner.members
+  ON sales.customer_id = members.customer_id
+-- does this look right?
+WHERE sales.order_date <= '2021-01-31'::DATE
+GROUP BY sales.customer_id
+ORDER BY points;
+
+
+-- Bonus questions 
+DROP TABLE IF EXISTS member_history ;
+CREATE TEMP TABLE member_history AS 
+SELECT
+sales.customer_id AS customer_id,
+sales.order_date AS  order_date ,
+menu.product_name AS product_name, 
+menu.price AS price ,
+CASE 
+WHEN  sales.order_date < members.join_date THEN 'N'
+ELSE 'Y'
+END AS member 
+FROM dannys_diner.sales 
+INNER JOIN dannys_diner.menu 
+ON sales.product_id = menu.product_id
+INNER JOIN dannys_diner.members
+ON sales.customer_id = members.customer_id;
+
+
+SELECT *
+FROM member_history 
+ORDER BY customer_id ,order_date ASC;
+
+
+SELECT
+  sales.customer_id,
+  sales.order_date,
+  menu.product_name,
+  menu.price,
+  -- check this logic carefully!
+  CASE WHEN sales.order_date > members.join_date THEN 'N'
+    ELSE 'Y'
+  END AS member
+FROM dannys_diner.sales
+INNER JOIN dannys_diner.menu
+  ON sales.product_id = menu.product_id
+-- check this!
+FULL JOIN dannys_diner.members
+  ON sales.customer_id = members.customer_id
+ORDER BY
+  sales.customer_id,
+  sales.order_date;
