@@ -10,6 +10,7 @@ and his examples and projects are known as real world problems by other data sci
 **SQL projects** : In this section we will see the eight projects that this course suggest and all the queries and functions
 required to solve the questions that were proposed.
 
-**Concept review (spanish only)** :
+**Concept review (spanish only)** : This section covers the theory behind this course , In fact I only covered those topics 
+that I consider important in a data analysis process in SQL . 
 
 
