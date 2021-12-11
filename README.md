@@ -1,7 +1,7 @@
 # Serious SQL Course by Danny Ma 🕹
 ![Language](https://img.shields.io/static/v1?label=Language&message=SQL&color=blueviolet)
 ![Version](https://img.shields.io/static/v1?label=Version&message=v1.0&color=blueviolet)
-![Release](https://img.shields.io/static/v1?label=Release Date &message= Dec 11 2021 &color=blueviolet)
+![Release](https://img.shields.io/static/v1?label=Release-Date&message=11-12-2021&color=blueviolet)
 
 This is a SQL course oriented to data self-taught coders , this course covers from basic to complex queries 
 using datetime , string manipulation and window functions , also this is a very good experience to learn a 
