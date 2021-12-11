@@ -13,6 +13,6 @@ required to solve the questions that were proposed.
 **Concept review (spanish only)** : This section covers the theory behind this course , In fact I only covered those topics 
 that I consider important in a data analysis process in SQL .
 
-1. [Revision sobre funcion COUNT y detectar valores unicos](https://github.com/ABENGDATA/Serious_SQL_Course/Review Concepts/Rv_1.md)
+[1. Revision sobre funcion COUNT y detectar valores unicos](https://github.com/ABENGDATA/Serious_SQL_Course/blob/a2bba36e555cf0071f31bf2cbe867b03beee73f4/Review%20Concepts/Rv_1.md)
 
 
