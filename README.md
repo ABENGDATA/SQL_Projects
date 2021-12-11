@@ -11,6 +11,8 @@ and his examples and projects are known as real world problems by other data sci
 required to solve the questions that were proposed.
 
 **Concept review (spanish only)** : This section covers the theory behind this course , In fact I only covered those topics 
-that I consider important in a data analysis process in SQL . 
+that I consider important in a data analysis process in SQL .
+
+1. [Revision sobre funcion COUNT y detectar valores unicos](https://github.com/ABENGDATA/Serious_SQL_Course/Review Concepts/Rv_1.md)
 
 
