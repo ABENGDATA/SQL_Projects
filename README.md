@@ -31,7 +31,7 @@ that I consider important in a data analysis process in SQL .
 
 [9. Revisión : Método Pear para solución de problemas ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_9.md)
 
-[10. Revisión : Creación de datasets reusalbes ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_10.md)
+[10. Revisión : Creación de datasets reusables ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_10.md)
 
 
 
