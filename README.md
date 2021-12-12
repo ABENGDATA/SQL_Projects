@@ -16,25 +16,25 @@ required to solve the questions that were proposed.
 **Concept review (spanish only)** : This section covers the theory behind this course , In fact I only covered those topics 
 that I consider important in a data analysis process in SQL .
 
-[1. Revisión :  Función COUNT y detectar valores únicos](https://github.com/ABENGDATA/Serious_SQL_Course/blob/a2bba36e555cf0071f31bf2cbe867b03beee73f4/Review%20Concepts/Rv_1.md)
+[Revisión :  Función COUNT y detectar valores únicos](https://github.com/ABENGDATA/Serious_SQL_Course/blob/a2bba36e555cf0071f31bf2cbe867b03beee73f4/Review%20Concepts/Rv_1.md)
 
-[2. Revisión  : Cómo Identificar datos duplicados ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_2.md)
+[Revisión  : Cómo Identificar datos duplicados ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_2.md)
 
-[3. Revisión : Estadística Básica en SQL](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_3.md)
+[Revisión : Estadística Básica en SQL](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_3.md)
 
-[4. Revisión : Estadística Básica en SQL Parte II](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_4.md)
+[Revisión : Estadística Básica en SQL Parte II](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_4.md)
 
-[5. Revisión : Table Joins en SQL ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_5.md)
+[Revisión : Table Joins en SQL ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_5.md)
 
-[6. Revisión : Caso de estudio Marketing](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_6.md)
+[Revisión : Caso de estudio Marketing](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_6.md)
 
-[7. Revisión : Caso de estudio Marketing Part II](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_7.md)
+[Revisión : Caso de estudio Marketing Part II](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_7.md)
 
-[8. Revisión : Window Functions](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_8.md)
+[Revisión : Window Functions](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_8.md)
 
-[9. Revisión : Método Pear para solución de problemas ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_9.md)
+[Revisión : Método Pear para solución de problemas ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_9.md)
 
-[10. Revisión : Creación de datasets reusables ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_10.md)
+[Revisión : Creación de datasets reusables ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_10.md)
 
 
 
