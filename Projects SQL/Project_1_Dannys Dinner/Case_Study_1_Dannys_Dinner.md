@@ -1,5 +1,5 @@
 # Case Study # 1 : Danny's Dinner 
-![](img1.png)
+![](img1.PNG)
 
 ## Context of Case study 
 The owner of a little start up named DANNY'S DINER has called us to check the data of his bussiness and answer some questions about the new trends of his bussiness this answers also will be the fuel to start a new loyalty program for his customers .
@@ -19,7 +19,7 @@ WHERE schemaname = 'dannys_diner';
 * dannysdinner.price
 
 and the relationships between tables in the schema dannysdinner is as follows :
-![](erd.png)
+![](erd.PNG)
 
 ### **sales : dannysdinner.sales**
 In the first query we explored what are the columns of the table and what data types it stores .
