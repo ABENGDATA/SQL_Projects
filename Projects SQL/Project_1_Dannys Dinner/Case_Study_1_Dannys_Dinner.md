@@ -1,5 +1,8 @@
 # Case Study # 1 : Danny's Dinner 
-![](img1.png)
+<p align="center">
+  <img src="img.png"/>
+</p>
+
 
 ## Context of Case study 
 The owner of a little start up named DANNY'S DINER has called us to check the data of his bussiness and answer some questions about the new trends of his bussiness this answers also will be the fuel to start a new loyalty program for his customers .
@@ -19,7 +22,9 @@ WHERE schemaname = 'dannys_diner';
 * dannysdinner.price
 
 and the relationships between tables in the schema dannysdinner is as follows :
-![](erd.png)
+<p align="center">
+  <img src="erd.png"/>
+</p>
 
 ### **sales : dannysdinner.sales**
 In the first query we explored what are the columns of the table and what data types it stores .
@@ -324,5 +329,42 @@ ORDER BY points;
 | B           | 820    |
 | A           | 1370   |
 
-11.  Bonus Question 
+11.  Bonus question : Create another table that contains the columns : customer_id , order_date, product_name,price and the last one
+must be called member and this column identifies when a customer did a purchase and was member at the same time (please identify members  with 'Y' and 'N' ) .
 
+```SQL 
+SELECT *
+FROM customer_data ;
+
+SELECT customer_id,order_date,product_name,price, 
+CASE 
+WHEN order_date >= join_date::DATE THEN 'Y' 
+ELSE 'N' 
+END as member
+FROM customer_data
+ORDER BY customer_id , order_date ; 
+
+
+```
+
+12. Bonus question : Add to our last table in the eleventh question a column called ranking an enumerate the purchases only when the customer had been a registered customer .
+```SQL 
+WITH table_ranking AS (
+SELECT customer_id,order_date,product_name,price, 
+CASE 
+WHEN order_date >= join_date THEN 'Y' 
+ELSE 'N' 
+END as member
+FROM customer_data
+ORDER BY customer_id , order_date  
+)
+
+SELECT customer_id,order_date,product_name,price,member,
+CASE 
+WHEN member =  'Y' THEN RANK() OVER(PARTITION BY customer_id,member ORDER BY order_date)
+ELSE  NULL
+END AS ranking
+FROM table_ranking;
+
+
+```
