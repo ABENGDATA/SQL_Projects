@@ -10,11 +10,23 @@ I want to bring this experience to my portfolio because there are not exist a mo
 and his examples and projects are known as real world problems by other data scientists in the social media .
 
 ## Table of contents 🕹
-**SQL projects** : In this section we will see the eight projects that this course suggest and all the queries and functions
+## **SQL projects** 
+
+In this section we will see the eight projects that this course suggest and all the queries and functions
 required to solve the questions that were proposed.
 
-**Concept review (spanish only)** : This section covers the theory behind this course , In fact I only covered those topics 
-that I consider important in a data analysis process in SQL .
+### Project : Dannys Diner 
+<p align="left">
+  <img width="600" height="300" src="https://github.com/ABENGDATA/Serious_SQL_Course/blob/5a0b903e0e7f0fbb2103bb24b019e80243fa1cd6/Projects%20SQL/Project_1_Dannys%20Dinner/proy1.jpg">
+</p>
+
+In this project you'll see how we can do a basic analisys with SQL in a small database and generate complex queries with few data and get useful results , Our study case is named "Dannys Dinner" a food shop that wants to use its informations in a way that can be used for get the bussiness better . 
+
+[![View Data](https://img.shields.io/badge/View-Data_of_this_Case_Study-blueviolet?style=for-the-badge&logo=GITHUB)](https://8weeksqlchallenge.com/case-study-1/)
+[![View Data Exploration Folder](https://img.shields.io/badge/View-Solution_Case_Study-blueviolet?style=for-the-badge&logo=GITHUB)](https://github.com/ABENGDATA/Serious_SQL_Course/blob/5a0b903e0e7f0fbb2103bb24b019e80243fa1cd6/Projects%20SQL/Project_1_Dannys%20Dinner/Case_Study_1_Dannys_Dinner.md)
+
+## **Concept review (spanish only)** : 
+This section covers the theory behind this course , In fact I only covered those topics that I consider important in a data analysis process in SQL .
 
 [Revisión :  Función COUNT y detectar valores únicos](https://github.com/ABENGDATA/Serious_SQL_Course/blob/a2bba36e555cf0071f31bf2cbe867b03beee73f4/Review%20Concepts/Rv_1.md)
 
