@@ -1,12 +1,8 @@
 # Case Study # 1 : Danny's Dinner 
-<<<<<<< HEAD
 <p align="center">
-  <img src="img.png"/>
+  <img src="img1.PNG"/>
 </p>
 
-=======
-![](img1.PNG)
->>>>>>> c2eedf6f70a2527806a2283242d90cbc3265da44
 
 ## Context of Case study 
 The owner of a little start up named DANNY'S DINER has called us to check the data of his bussiness and answer some questions about the new trends of his bussiness this answers also will be the fuel to start a new loyalty program for his customers .
@@ -28,11 +24,8 @@ WHERE schemaname = 'dannys_diner';
 and the relationships between tables in the schema dannysdinner is as follows :
 <<<<<<< HEAD
 <p align="center">
-  <img src="erd.png"/>
+  <img src="erd.PNG"/>
 </p>
-=======
-![](erd.PNG)
->>>>>>> c2eedf6f70a2527806a2283242d90cbc3265da44
 
 ### **sales : dannysdinner.sales**
 In the first query we explored what are the columns of the table and what data types it stores .
