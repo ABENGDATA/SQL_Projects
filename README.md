@@ -48,6 +48,7 @@ This section covers the theory behind this course , In fact I only covered those
 
 [Revisión : Creación de datasets reusables ](https://github.com/ABENGDATA/Serious_SQL_Course/blob/fc2159c4b85aebe458ae3ef3b3e338225cb63f57/Review%20Concepts/Rv_10.md)
 
+[Revisión : Uso de strings en SQL](https://github.com/ABENGDATA/Serious_SQL_Course/blob/ff78553c3767ef944689562ab29816e0b11e9672/Review%20Concepts/Rv11.md)
 
 
 
