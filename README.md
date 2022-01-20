@@ -31,6 +31,7 @@ In this project you'll see how we can do a basic analysis with SQL in a small da
 </p>
 
 This project was about the analysis of a start-up of pizza , several queries were generated to accomplish the questions of the customer (owner of the start-up) , if you check our work you can realize that it was an exploratory work through SQL code .
+
 [![View Data](https://img.shields.io/badge/View-Data_of_this_Case_Study-blueviolet?style=for-the-badge&logo=GITHUB)](https://8weeksqlchallenge.com/case-study-2/)
 [![View Data Exploration Folder](https://img.shields.io/badge/View-Solution_Case_Study-blueviolet?style=for-the-badge&logo=GITHUB)](https://github.com/ABENGDATA/Serious_SQL_Course/blob/7c8cfb646353d9307a57554d6fd581ee8053d7e9/Projects%20SQL/Project_2_Pizza_Runner/Project_2_Pizza%20Runner.md)
 
