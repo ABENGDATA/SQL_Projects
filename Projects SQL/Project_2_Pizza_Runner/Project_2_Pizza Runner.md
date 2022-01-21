@@ -1,6 +1,6 @@
 # Case Study # 2 : Pizza Runner 
 <p align="center">
-  <img src="https://github.com/ABENGDATA/Serious_SQL_Course/blob/838c01c6cd6a8903acc7f7a81625b726dc7af762/Projects%20SQL/Project_2_Pizza_Runner/pizza_runner.png"/>
+  <img src="pizza_runner.png"/>
 </p>
 
 ## Context of Case Study 
@@ -98,7 +98,7 @@ LIMIT 5 ;
 The following ERD describes the relationship between all the tables and the primary key that link the tables that have a relationship .
 
 <p align="center">
-  <img src="https://github.com/ABENGDATA/Serious_SQL_Course/blob/838c01c6cd6a8903acc7f7a81625b726dc7af762/Projects%20SQL/Project_2_Pizza_Runner/ERD.png"/>
+  <img src="ERD.png"/>
 </p>
 
 ## Customer Questions 
